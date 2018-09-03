@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# Set file modification time to origin time for querydatas used in wfs tests.
+# Modification time is returned as data resultTime, so it must be fixed in order to satisfy tests.
+#
+# BS-1310
+#
+querydatas=(
+    pal/200808050933_pal_skandinavia_pinta.sqd
+    harmonie/201705110343_harmonie_hybrid-cropped.sqd
+    hirlam/201303180352_hirlam_eurooppa_pinta_cropped.sqd
+)
+
+dir=$(dirname $0)
+
+for f in ${!querydatas[*]}
+do
+    qd="${dir}/${querydatas[$f]}"
+
+    if [ ! -f "$qd" ]; then
+        echo "*** Missing file $qd"
+    else
+        originTime=$(qdinfo -T "%Y-%m-%dT%H:%M:00" -q $qd | grep "^Origin time" | awk '{print $4}' | tr "T" " ")
+        echo "Setting modification time $originTime for $qd"
+        touch -m -d """$originTime""" $qd
+    fi
+done
