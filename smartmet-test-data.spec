@@ -37,8 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(0775,root,root,0775)
-%{_datadir}/smartmet/test/*
-%{_bindir}/init_test_data
+%{_datadir}/smartmet/test/data/*
 
 %changelog
 * Tue Sep 25 2018 Mika Heikki Pernu <heikki.pernu@fmi.fi> - 18.9.25-1.fmi

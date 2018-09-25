@@ -12,17 +12,32 @@ querydatas=(
     hirlam/201303180352_hirlam_eurooppa_pinta_cropped.sqd
 )
 
-dir=$(dirname $0)
+realname=$(readlink -e $0) # Make sure we follow to real data directory even if symlinked
+dir=$(dirname $realname)
 
-for f in ${!querydatas[*]}
-do
-    qd="${dir}/${querydatas[$f]}"
+cd "$dir"
 
-    if [ ! -f "$qd" ]; then
-        echo "*** Missing file $qd"
-    else
-        originTime=$(qdinfo -T "%Y-%m-%dT%H:%M:00" -q $qd | grep "^Origin time" | awk '{print $4}' | tr "T" " ")
-        echo "Setting modification time $originTime for $qd"
-        touch -m -d """$originTime""" $qd
-    fi
-done
+modtimescript=modify_times.sh
+
+if [ -x "/usr/bin/qdinfo" ] ; then
+    echo "# Set modification times for certain data files" > $modtimescript.tmp
+    for qd in ${querydatas[*]}
+    do
+	if [ ! -f "$qd" ]; then
+	    echo "*** Missing file $qd"
+	else
+	    originTime=$(qdinfo -T "%Y-%m-%dT%H:%M:00" -q $qd | grep "^Origin time" | awk '{print $4}' | tr "T" " ")
+            echo "Setting modification time $originTime for $qd"
+            echo touch -m -d "\"$originTime\"" $qd >> $modtimescript.tmp
+	fi
+    done
+    cmp -s $modtimescript $modtimescript.tmp || (
+	echo "Target modification times for test data have changed"
+	echo "Please commit `basename $modtimescript` as well"
+	mv $modtimescript.tmp $modtimescript
+    )
+    rm -f $modtimescript.tmp
+fi
+
+. $modtimescript
+
