@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 18.9.25
+Version: 18.9.26
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -40,5 +40,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/*
 
 %changelog
+* Wed Sep 26 2018 Mika Heiskanen <mika.heiskanen@fmi.fi> - 18.9.26-1.fmi
+- Removed extra valgrind files
+
 * Tue Sep 25 2018 Mika Heikki Pernu <heikki.pernu@fmi.fi> - 18.9.25-1.fmi
 - Packaged test data as an RPM
