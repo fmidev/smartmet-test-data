@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 18.9.26
+Version: 19.1.30
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/*
 
 %changelog
+* Wed Jan 30 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.1.30-1.fmi
+- Added grassfire-data for WMS tests
+
 * Wed Sep 26 2018 Mika Heiskanen <mika.heiskanen@fmi.fi> - 18.9.26-1.fmi
 - Removed extra valgrind files
 
