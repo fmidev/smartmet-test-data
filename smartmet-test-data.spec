@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 19.2.12
+Version: 19.4.26
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/*
 
 %changelog
+* Fri Apr 26 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.4.26-1.fmi
+- Fixed climate data to be in the original YKJ projection, the stereographic version was projected incorrectly
+
 * Tue Feb 12 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.2.12-1.fmi
 - Added forestfire-data for WMS tests
 
