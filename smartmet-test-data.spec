@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 19.4.26
+Version: 19.5.9
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -38,8 +38,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(0775,root,root,0775)
 %{_datadir}/smartmet/test/data/*
+%defattr(0775,root,root,0777)
+%{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Thu May  9 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.5.9-1.fmi
+- sqlite-directory needs to be writable for temporary files
+
 * Fri Apr 26 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.4.26-1.fmi
 - Fixed climate data to be in the original YKJ projection, the stereographic version was projected incorrectly
 
