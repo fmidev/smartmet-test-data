@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 19.5.9
+Version: 19.10.31
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -42,6 +42,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Thu Oct 31 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.10.31-1.fmi
+- Added indexes to sqlite tables
+- Removed some observations to keep sqlite data below 100 MB limit
+
 * Thu May  9 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.5.9-1.fmi
 - sqlite-directory needs to be writable for temporary files
 
