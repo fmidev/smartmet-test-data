@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 19.10.31
+Version: 19.11.4
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Mon Nov  4 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.11.4-1.fmi
+- Fixed the modification time of all querydata files to keep WFS test results the same
+
 * Thu Oct 31 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.10.31-1.fmi
 - Added indexes to sqlite tables
 - Removed some observations to keep sqlite data below 100 MB limit

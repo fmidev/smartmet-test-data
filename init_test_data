@@ -6,10 +6,45 @@
 # BS-1310
 #
 querydatas=(
-    pal/200808050933_pal_skandinavia_pinta.sqd
-    pal/200808050729_pal_skandinavia_pinta.sqd
-    harmonie/201705110343_harmonie_hybrid-cropped.sqd
-    hirlam/201303180352_hirlam_eurooppa_pinta_cropped.sqd
+   climate/tmax.sqd
+   climatepoints/201201010000_climate_suomi_pisteet.sqd
+   ecpainepinta/200809090714_ecmwf_skandinavia_painepinta240h.sqd
+   ecpinta/200808041930_ecmwf_eurooppa_pinta.sqd
+   ecpiste/200808041914_ecmwf_maailma_piste96h.sqd
+   ecworld/201503131200_ecmwf_maailma_pinta.sqd
+   ecwwi/201509100713_ecmwf_eurooppa_wwi.sqd
+   ecwwi/201608100700_ecmwf_eurooppa_wwi-prob.sqd
+   enfuser/201808301242_helsinki_metropolitan-cropped.sqd
+   gfs/gfs.sqd
+   ground/201604140000_pal_skandinavia_maanpinta.sqd
+   harmonie/201705110343_harmonie_hybrid-cropped.sqd
+   hbm/201407280657_hbm_hir_pinta.sqd
+   hirlam/201303180352_hirlam_eurooppa_pinta_cropped.sqd
+   hirwind/201804060345_hirlam_eurooppa_pinta.sqd
+   kalman/201606282133_ecmwf_kalman_point.sqd
+   lot/lot7-fixed2.sqd
+   luotaus/200812051310_havy_eurooppa_luotaus.sqd
+   metcoop/metcoop.sqd
+   pal/200808050729_pal_skandinavia_pinta.sqd
+   pal/200808050933_pal_skandinavia_pinta.sqd
+   pal/20130318/201303180158_pal_skandinavia_pinta_cropped.sqd
+   pal/download/20130920T011300_20130917T010000_20130929T060000_pal_skandinavia_pinta.sqd
+   pal/download/20130920T123700_20130917T120000_20130929T180000_pal_skandinavia_pinta.sqd
+   synop/200812051328_eurooppa_synop.sqd
+   tosummertime/201203240143_pal_skandinavia_pinta.sqd
+   towintertime/201210270251_pal_skandinavia_pinta.sqd
+   tutka_suomi_rr/201309101000_tutka_suomi_rr.sqd
+   tutka_suomi_rr/201309101005_tutka_suomi_rr.sqd
+   tutka_suomi_rr/201309101010_tutka_suomi_rr.sqd
+   tutka_suomi_rr/201309101015_tutka_suomi_rr.sqd
+   tutka_suomi_rr/201309101020_tutka_suomi_rr.sqd
+   tutka_suomi_rr/201309101025_tutka_suomi_rr.sqd
+   tutka_suomi_rr/201309101030_tutka_suomi_rr.sqd
+   tutka_suomi_rr/201309101035_tutka_suomi_rr.sqd
+   wafs/201601191145_WAFS.sqd
+   weekly/201606141602_ecmwf_eurooppa_clim_weekly.sqd
+   grassfire/201812120600_rp_maakunta_piirto.sqd
+   forestfire/201902070600_mp_hila_piirto.sqd
 )
 
 realname=$(readlink -e $0) # Make sure we follow to real data directory even if symlinked
