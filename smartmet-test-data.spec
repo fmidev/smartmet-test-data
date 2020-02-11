@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 19.11.4
+Version: 20.2.11
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -42,6 +42,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Tue Feb 11 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.2.11-1.fmi
+- Fixed test sqlite database
+- Start using LFS for the sqlite database
+
 * Mon Nov  4 2019 Mika Heiskanen <mika.heiskanen@fmi.fi> - 19.11.4-1.fmi
 - Fixed the modification time of all querydata files to keep WFS test results the same
 
