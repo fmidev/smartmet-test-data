@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 20.5.27
+Version: 20.5.29
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Fri May 29 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.5.29-1.fmi
+- Fixed metcoop +lat_2 to value 63.3
+
 * Wed May 27 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.5.27-1.fmi
 - Replaced old metcoop test data with a deprecated NFmiGdalArea projection with a NFmiLambertConformalConicArea projection
 
