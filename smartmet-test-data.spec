@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 20.5.29
+Version: 20.6.1
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Mon Jun  1 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.6.1-1.fmi
+- Added MEPS data with the correct WGS84 datum. Metcoop data is now deprecated.
+
 * Fri May 29 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.5.29-1.fmi
 - Fixed metcoop +lat_2 to value 63.3
 
