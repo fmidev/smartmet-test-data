@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 20.6.30
+Version: 20.10.1
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Thu Oct  1 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.10.1-1.fmi
+- Removed obsolete stations subdirectory, use sqlite directory instead
+
 * Tue Jun 30 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.6.30-1.fmi
 - Added WRF test data
 
