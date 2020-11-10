@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 20.10.29
+Version: 20.11.10
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Tue Nov 10 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.11.10-1.fmi
+- sqlite-cache updated, weather_data_qc parameter is now an integer
+
 * Thu Oct 29 2020 Anssi Reponen <anssi.reponen@fmi.fi> - 20.10.29-1.fmi
 - Sqlite-file updated because type of timestamp field changed (BRAINSTORM-1950)
 
