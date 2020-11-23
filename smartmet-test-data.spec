@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-%{DIRNAME}
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
-Version: 20.11.10
+Version: 20.11.23
 Release: 1%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Mon Nov 23 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.11.23-1.fmi
+- Fixed stations.txt file, it had wrong dates for example for Kaisaniemi AWS
+
 * Tue Nov 10 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.11.10-1.fmi
 - sqlite-cache updated, weather_data_qc parameter is now an integer
 
