@@ -35,3 +35,14 @@ ecpiste/200808041914_ecmwf_maailma_piste96h.sqd filter=lfs diff=lfs merge=lfs -t
 enfuser/201808301242_helsinki_metropolitan-cropped.sqd filter=lfs diff=lfs merge=lfs -text
 ground/201604140000_pal_skandinavia_maanpinta.sqd filter=lfs diff=lfs merge=lfs -text
 luotaus/200812051310_havy_eurooppa_luotaus.sqd filter=lfs diff=lfs merge=lfs -text
+eclocal/ecmwf.sqd filter=lfs diff=lfs merge=lfs -text
+gem/gem.sqd filter=lfs diff=lfs merge=lfs -text
+meps/meps.sqd filter=lfs diff=lfs merge=lfs -text
+wrf/wrf.sqd filter=lfs diff=lfs merge=lfs -text
+grib/hirlam/201303180352_hirlam_eurooppa_pinta_cropped.grib filter=lfs diff=lfs merge=lfs -text
+grib/ecworld/201503131200_ecmwf_maailma_pinta.grib filter=lfs diff=lfs merge=lfs -text
+grib/ecpainepinta/200809090714_ecmwf_skandinavia_painepinta240h.grib filter=lfs diff=lfs merge=lfs -text
+grib/pal/200808050933_pal_skandinavia_pinta.grib filter=lfs diff=lfs merge=lfs -text
+grib/pal/download/20130920T011300_20130917T010000_20130929T060000_pal_skandinavia_pinta.grib filter=lfs diff=lfs merge=lfs -text
+grib/pal/download/20130920T123700_20130917T120000_20130929T180000_pal_skandinavia_pinta.grib filter=lfs diff=lfs merge=lfs -text
+grib/pal/200808050729_pal_skandinavia_pinta.grib filter=lfs diff=lfs merge=lfs -text
