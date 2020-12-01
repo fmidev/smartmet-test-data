@@ -4,7 +4,7 @@
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
 Version: 20.12.1
-Release: 2%{?dist}.fmi
+Release: 3%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
 URL: https://github.com/fmidev/smartmet-test-data
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
+* Tue Dec  1 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.1-3.fmi
+- Added many t2m, wpsd and wdir observations for 20130805T1500 for WMS tests
+
 * Tue Dec  1 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.1-2.fmi
 - Removed obsolete test-data whose time range is entirely covered by another data
 
