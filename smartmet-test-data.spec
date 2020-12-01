@@ -4,7 +4,7 @@
 Summary: Smartmet server static test data
 Name: %{SPECNAME}
 Version: 20.12.1
-Release: 1%{?dist}.fmi
+Release: 2%{?dist}.fmi
 License: MIT
 Group: Development/Libraries
 URL: https://github.com/fmidev/smartmet-test-data
@@ -42,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/smartmet/test/data/sqlite
 
 %changelog
-* Tue Dec  1 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.1-1.fmi
+* Tue Dec  1 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.12.1-2.fmi
 - Removed obsolete test-data whose time range is entirely covered by another data
 
 * Mon Nov 30 2020 Mika Heiskanen <mika.heiskanen@fmi.fi> - 20.11.30-1.fmi
